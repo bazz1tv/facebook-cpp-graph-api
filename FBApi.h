@@ -29,12 +29,15 @@ private:
   static QString FQL_MULTIQUERY_API_URL;
   static QString GENERAL_API_URL;
   static QString GROUP_PING_ID;
+  static QString EMAIL;
+  static QString PASSWORD;
   QString m_fbSecretKey;
   QString m_fbApiKey;
   QString m_fbuIdKey;   
   QString m_fbAccessToken;
   QString m_fbSessionKey;
   QString m_fbSigKey;
+  
 
   
 
@@ -72,6 +75,15 @@ public:
   QString GetUserIdKey()
   {
 	  return m_fbuIdKey;
+  }
+
+  QString GetUserEmail()
+  {
+    return EMAIL;
+  }
+  QString GetUserPassword()
+  {
+    return PASSWORD;
   }
 
   QString GetUserApiKey()

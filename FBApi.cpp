@@ -8,11 +8,9 @@
 #include "FBApi.h"
 #include "UT.h"
 #include "HttpClient.h"
-
-FBApi* FBApi::_instance = NULL ;
 #include "config.h"
 
- 
+FBApi* FBApi::_instance = NULL ;
 
 
 FBApi::FBApi()

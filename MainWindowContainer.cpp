@@ -24,19 +24,19 @@ void MainWindowContainer::Check_validity_of_current_token()
     // Read File for old access token
 
     // CHECK SHIT
-     /*QString ApiURLToInvoke;
+     QString ApiURLToInvoke;
      QString response1;
      QMap<QString,QString> args1;
      ApiURLToInvoke = FBApi::getInstance()->GetGENERAL_API_URL()+"/"+"oauth/access_token_info?";
      args1.insert("client_id", FBApi::getInstance()->GetAPPLICATION_ID());
      // NEED TO GET A TOKEN FOR THIS PART!
-     args1.insert("access_token",OLDACCESSTOKEN);
+     args1.insert("access_token","OLDACCESSTOKEN");
      FBApi::getInstance()->InvokeAPI(FBApi::GET,
                                      args1,
                                      response1,
                                      ApiURLToInvoke);
 
-     std::cerr << response1.toStdString() << std::endl;*/
+     std::cerr << response1.toStdString() << std::endl;
 }
 
 MainWindowContainer::MainWindowContainer(QWidget* parent) : 
@@ -173,8 +173,8 @@ void MainWindowContainer::adjustLocation()
    locationEdit =  ui.webView->url().toString() ;
 	 // remove it in the final code
 	 // this is here only for fast testing , for you not to type the user/pass all the time
-   QString code_email = "document.getElementById('email').value='derp@derp.com'";
-   QString code_password = "document.getElementById('pass').value='yourpassword'";
+   QString code_email = "document.getElementById('email').value='" + FBApi::getInstance()->GetUserEmail() + "'";
+   QString code_password = "document.getElementById('pass').value='" + FBApi::getInstance()->GetUserPassword() + "'";
    ui.webView->page()->mainFrame()->evaluateJavaScript(code_email);
    ui.webView->page()->mainFrame()->evaluateJavaScript(code_password);
 }

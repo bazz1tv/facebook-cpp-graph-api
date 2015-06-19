@@ -3,3 +3,4 @@ FB_GraphApi_mini.pro.user
 *.o
 Makefile
 FB_GraphApi_mini.app
+ui_fbapi_gui.h

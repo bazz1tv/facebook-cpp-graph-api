@@ -24,7 +24,7 @@ void MainWindowContainer::Check_validity_of_current_token()
     // Read File for old access token
 
     // CHECK SHIT
-     QString ApiURLToInvoke;
+     /*QString ApiURLToInvoke;
      QString response1;
      QMap<QString,QString> args1;
      ApiURLToInvoke = FBApi::getInstance()->GetGENERAL_API_URL()+"/"+"oauth/access_token_info?";
@@ -36,7 +36,7 @@ void MainWindowContainer::Check_validity_of_current_token()
                                      response1,
                                      ApiURLToInvoke);
 
-     std::cerr << response1.toStdString() << std::endl;
+     std::cerr << response1.toStdString() << std::endl;*/
 }
 
 MainWindowContainer::MainWindowContainer(QWidget* parent) : 

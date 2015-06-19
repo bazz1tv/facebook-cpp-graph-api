@@ -5,7 +5,8 @@
 #                                                                              
 ###############################################################################
 QT      +=  core gui webkit webkitwidgets network script widgets
-HEADERS =   MainWindowContainer.h \
+HEADERS =   config.h \
+		MainWindowContainer.h \
 	    FBApi.h \	    
 	    HttpClient.h \
 	    UT.h  \
